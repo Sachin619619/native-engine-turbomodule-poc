@@ -1,0 +1,14 @@
+{
+  "name": "native-engine-turbomodule-poc",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test:engine": "bash scripts/test-core-engine.sh",
+    "mobile:install": "npm --prefix apps/mobile install",
+    "mobile:start": "npm --prefix apps/mobile run start",
+    "mobile:android": "npm --prefix apps/mobile run android",
+    "mobile:typecheck": "npm --prefix apps/mobile run typecheck",
+    "android:build-aar": "bash -lc 'source scripts/android-env.sh && cd native/android-wrapper && \"$GRADLE_BIN\" assembleRelease'",
+    "android:build-app": "bash -lc 'source scripts/android-env.sh && cd apps/mobile/android && \"$GRADLE_BIN\" :app:assembleDebug'"
+  }
+}

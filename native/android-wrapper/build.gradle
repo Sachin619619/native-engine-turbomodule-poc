@@ -1,0 +1,24 @@
+plugins {
+    id "com.android.library"
+}
+
+android {
+    namespace "com.genericpoc.enginewrapper"
+    compileSdk 35
+
+    defaultConfig {
+        minSdk 24
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++17 -Wall -Wextra"
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
+}

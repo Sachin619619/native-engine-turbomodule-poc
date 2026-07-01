@@ -1,0 +1,29 @@
+pluginManagement {
+    includeBuild("../node_modules/@react-native/gradle-plugin")
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id("com.facebook.react.settings")
+}
+
+extensions.configure(com.facebook.react.ReactSettingsExtension) { settings ->
+    settings.autolinkLibrariesFromCommand()
+}
+
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "GenericNativeEngineTurboModuleMobile"
+include ":app"
+include ":android-engine-wrapper"
+
+project(":android-engine-wrapper").projectDir = file("../../../native/android-wrapper")

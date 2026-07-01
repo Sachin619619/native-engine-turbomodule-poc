@@ -1,0 +1,27 @@
+plugins {
+    id "com.android.application"
+    id "com.facebook.react"
+}
+
+react {
+    autolinkLibrariesWithApp()
+}
+
+android {
+    namespace "com.genericpoc.mobile"
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.genericpoc.turbomodulemobile"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "0.1.0"
+    }
+}
+
+dependencies {
+    implementation "com.facebook.react:react-android:0.76.5"
+    implementation "org.webkit:android-jsc:+"
+    implementation project(":android-engine-wrapper")
+}
