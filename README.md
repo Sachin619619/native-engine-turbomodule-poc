@@ -103,6 +103,7 @@ If another laptop has different install paths, update only `scripts/android-env.
 ## Main Documentation
 
 - `docs/TURBOMODULE_FLOW.md`: simple explanation of the TurboModule call flow.
+- `docs/BRIDGE_COMPARISON.md`: classic native bridge vs TurboModule implementation comparison.
 - `docs/ARCHITECTURE.md`: layer explanation.
 - `docs/CALL_FLOW.md`: exact runtime call flow.
 - `docs/BUILD_AND_RUN.md`: setup and build instructions.
